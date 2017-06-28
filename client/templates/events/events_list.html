@@ -1,0 +1,14 @@
+<template name="eventsList">
+    <h3 class="band">Events
+        {{#if currentUser}}<span style="float:right;"><a href="{{pathFor 'addNewEvent'}}">Book Event Now</a></span> {{/if}}
+    </h3>
+    <div class="calendar">
+        {{> fullcalendar id="fullCalendar" options="options"}}
+    </div>
+    <div class="bands">
+        {{#each events}}
+          {{> eventItem}}
+        {{/each}}
+    </div>
+
+</template>

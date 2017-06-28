@@ -1,0 +1,23 @@
+<template name="agentPage">
+    <div class="band-page">
+        {{> agentItem}}
+        <h3 class="band">List of Shows</h3>
+        {{#each Events }}
+        <div class="band">
+           <div class="band-content">
+               <h1>{{ eventTitle }}</h1>
+               <h3><a href="/bands/{{ eventBandName }}">{{ eventBandName }}</a>at
+                 <a href="/venues/{{ eventVenueName }}">{{ eventVenueName }}</a>
+                 <span class="show-map"><a href="/map">Show On Map</a></span>
+                 {{#if currentUser}} <span><a href="{{pathFor 'eventEdit'}}">Edit Event Info</a></span> {{/if}}
+               </h3>
+               <div class="show-times">
+                   From: {{ formatStartTime eventStartTime "long" }} Until
+                   {{ formatStopTime eventStopTime "short" }}</div>
+               <div class="show-notes">Show Notes: {{ showNotes }}</div>
+               <div class="sponsor">Sponsored By: {{ showSponsor }}</div>
+           </div>
+         </div>
+        {{/each}}
+    </div>
+</template>

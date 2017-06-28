@@ -1,0 +1,10 @@
+<template name="venuesList">
+    <h3 class="band">Venues
+        {{#if currentUser}}<span style="float:right;"><a href="{{pathFor 'addNewVenue'}}"> Add New Venue</a></span>{{/if}}
+    </h3>
+  <div class="bands">
+    {{#each venues}}
+      {{> venueItem}}
+    {{/each}}
+  </div>
+</template>

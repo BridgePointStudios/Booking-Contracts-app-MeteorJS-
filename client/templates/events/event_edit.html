@@ -1,0 +1,6 @@
+<template name="eventEdit">
+    <h1>Edit Event Info</h1>
+    {{> quickForm collection="Events" doc=this id="updateEventForm" type="update"}}
+
+    {{> quickRemoveButton collection="Events" _id=this._id beforeRemove=beforeRemove class="btn btn-danger"}}
+</template>

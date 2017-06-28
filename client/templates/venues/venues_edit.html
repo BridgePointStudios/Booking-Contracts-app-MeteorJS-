@@ -1,0 +1,5 @@
+<template name="venueEdit">
+    <h1>Edit Venue Info</h1>
+    {{> quickForm collection="Venues" doc=this id="updateVenueForm" type="update"}}
+    {{> quickRemoveButton collection="Venues" _id=this._id beforeRemove=beforeRemove class="btn btn-danger"}}
+</template>

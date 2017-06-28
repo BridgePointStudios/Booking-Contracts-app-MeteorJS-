@@ -1,0 +1,5 @@
+<template name="userEdit">
+    <h1>Edit User Info</h1>
+    {{> quickForm collection="Users" doc=this id="updateUserForm"  type="update"}}
+    {{> quickRemoveButton collection="Users" _id=this._id beforeRemove=beforeRemove class="btn btn-danger"}}
+</template>

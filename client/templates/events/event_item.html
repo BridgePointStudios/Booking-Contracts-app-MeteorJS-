@@ -1,0 +1,23 @@
+<template name="eventItem">
+    <div class="band">
+        <div class="band-content">
+
+            <h1>{{ eventTitle }}
+               {{#if currentUser}}
+                   <span class="button" style="float:right"><button><a href="#" class="genpdf">Create PDF Contract</a></button></span>
+                  
+               {{/if}}
+            </h1>
+            <h3><a href="/bands/{{ eventBandName }}">{{ eventBandName }}</a>at
+             <a href="/venues/{{ eventVenueName }}">{{ eventVenueName }}</a>
+             {{#if currentUser}} <span><a href="{{pathFor 'eventEdit'}}">Edit Event Info</a></span> {{/if}}
+            </h3>
+            <div class="show-times">
+               From: {{ formatStartTime eventStartTime "long" }} Until
+               {{ formatStopTime eventStopTime "short" }}</div>
+            <div class="show-notes">Show Notes: {{ showNotes }}</div>
+            <div class="sponsor">Sponsored By: {{ showSponsor }}</div>
+            <div class="bandFee">Fee: {{ eventBandPayment }}</div>
+        </div>
+     </div>
+</template>

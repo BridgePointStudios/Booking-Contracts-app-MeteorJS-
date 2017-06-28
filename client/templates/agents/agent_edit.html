@@ -1,0 +1,5 @@
+<template name="agentEdit">
+    <h1>Edit Agent Info</h1>
+    {{> quickForm collection="Agents" doc=this id="updateAgentForm"  type="update"}}
+    {{> quickRemoveButton collection="Agents" _id=this._id beforeRemove=beforeRemove class="btn btn-danger"}}
+</template>

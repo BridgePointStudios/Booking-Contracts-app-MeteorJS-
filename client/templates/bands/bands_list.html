@@ -1,0 +1,9 @@
+<template name="bandsList">
+    <h3 class="band">Bands{{#if currentUser}}<span style="float:right;"><a href="{{pathFor 'addNewBand'}}"> Add New Band</a></span>{{/if}}
+    <a href="" id="buttonDownload">Download bandsList</a></h3>
+  <div class="bands">
+    {{#each bands}}
+      {{> bandItem}}
+    {{/each}}
+  </div>
+</template>

@@ -1,0 +1,8 @@
+<template name="billingDashboard">
+    {{#each months}}
+        <h3 class="band">{{this}}</h3>
+        <div class="band-revenue">
+            {{> reactiveTable collection=msauRevenueCollection}}
+        </div>
+    {{/each}}
+</template>

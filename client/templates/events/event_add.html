@@ -1,0 +1,23 @@
+<template name="addNewEvent">
+
+    {{#autoForm collection="Events" id="insertEventAutoForm" type="insert"}}
+    <fieldset>
+        {{> afQuickField name="eventTitle"}}
+        {{> afQuickField name="eventBandName" options=bandNames}}
+        {{> afQuickField name="eventVenueName" options=venueNames}}
+        {{> afQuickField name="eventBookingAgent" options=eventBookingAgents}}
+        {{> afQuickField name="eventStartTime"}}
+        {{> afQuickField name="eventStopTime"}}
+        {{> afQuickField name="eventCost"}}
+        {{> afQuickField name="showNotes" rows=4}}
+        {{> afQuickField name="eventPaProvided"}}
+        {{> afQuickField name="eventMerch"}}
+        {{> afQuickField name="eventLodging"}}
+        {{> afQuickField name="eventTabProvided"}}
+        {{> afQuickField name="eventBandPayment"}}
+        {{> afQuickField name="showSponsor"}}
+    </fieldset>
+    <br />
+    <button type="submit" class="btn btn-primary">Create Event</button>
+    {{/autoForm}}
+</template>

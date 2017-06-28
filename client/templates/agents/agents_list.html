@@ -1,0 +1,8 @@
+<template name="agentsList">
+    <h3 class="band">Agents{{#if currentUser}}<span style="float:right;"><a href="{{pathFor 'addNewAgent'}}"> Add New Agent</a></span>{{/if}}</h3>
+  <div class="bands">
+    {{#each agents}}
+      {{> agentItem}}
+    {{/each}}
+  </div>
+</template>

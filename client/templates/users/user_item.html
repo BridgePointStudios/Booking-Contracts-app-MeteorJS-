@@ -1,0 +1,14 @@
+<template name="userItem">
+    <div class="band">
+       <div class="band-content">
+           <h3 class="band">username: {{username}} <br/> email: {{emails.[0].address}} <br/> profile.name:{{profile.name}} <br/> twitter: {{services.twitter.screenName}} <br/> facebook: {{services.facebook.name}} </h3>
+           <h3><a href="{{pathFor 'userPage'}}">{{ username }}{{profile.name}}</a>
+
+              {{#if currentUser}} <span><a href="{{pathFor 'userEdit'}}">Edit User Info</a></span>{{/if}}
+
+           </h3>
+
+
+       </div>
+     </div>
+</template>
